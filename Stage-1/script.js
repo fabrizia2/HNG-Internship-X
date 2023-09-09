@@ -4,7 +4,12 @@ function updateCurrentDayAndTime() {
     const date = new Date();
     const currentDay = daysOfWeek[date.getUTCDay()];
 
-    const currentUTCTime = date.toISOString().substr(11, 12);
+    // Get the current UTC time in milliseconds
+    const currentUTCTime = Date.now();
+
+    // Format the milliseconds as HH:mm:ss.SSS
+    const formattedTime = new Date(currentUTCTime).toISOString().substr(11, 12);
+
     document.getElementById("currentDayOfTheWeek").textContent = currentDay;
     document.getElementById("currentUTCTime").textContent = currentUTCTime;
 }
