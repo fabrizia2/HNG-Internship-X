@@ -1,0 +1,11 @@
+# Global settings for Netlify
+[build]
+  command = ""  # build command if applicable
+  
+
+# Publish settings for stage one task
+[[redirects]]
+  from = "/Stage-1/*"       # Define the URL path for stage one task
+  to = "/Stage-1"     # Specify the directory path for stage one task
+  status = 200
+  publish = "Stage-1"       # Specify the directory to publish for stage one task
