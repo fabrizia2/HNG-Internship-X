@@ -1,4 +1,4 @@
-/ JavaScript to update the current day and UTC time 
+// JavaScript to update the current day and UTC time 
 function updateCurrentDayAndTime() {
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const date = new Date();
