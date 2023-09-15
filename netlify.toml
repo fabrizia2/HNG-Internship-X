@@ -1,6 +1,6 @@
 # Global settings for Netlify
 [build]
-  command = ""  # build command if applicable
+  command = "npm run build"  # build command if applicable
   
 
 # Publish settings for stage one task
