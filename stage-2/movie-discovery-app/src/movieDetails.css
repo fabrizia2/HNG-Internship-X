@@ -1,0 +1,64 @@
+.movie-details-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.nabar {
+  height: 650px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.nabar a {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  width: 90%;
+}
+
+.nabar a:hover {
+  color: red;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+.nabar .active-link {
+  background-color: rgb(235, 147, 147);
+  color: rgb(247, 5, 5);
+  font-weight: bold;
+}
+
+.her-section {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;      
+  align-items: center;          
+  justify-content: center;
+  margin-top: -30px;
+  border-radius: 20px;
+}
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(229, 229, 229, 0.4); /* Circular background color */
+  border-radius: 50%; /* Make it circular */
+  margin-right: 10px; 
+}
+.content a {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .nabar {
+    margin-top: -160px;
+  }
+}
