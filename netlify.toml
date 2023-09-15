@@ -9,3 +9,10 @@
   to = "/Stage-1"     # Specify the directory path for stage one task
   status = 200
   publish = "Stage-1"       # Specify the directory to publish for stage one task
+
+# Publish settings for Wall-clock
+[[redirects]]
+  from = "/stage-2/*"           # Define the URL path for Wall-clock
+  to = "/stage-2/:splat"         # Specify the directory path for Wall-clock
+  status = 200
+  publish = "stage-2"           # Specify the directory to publish for Wall-clock
