@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Login from './components/login';
-import ImageGallery from './components/imageGallery';
+import Apps from './components/imageGallery';
 import './App.css';
+
 
 const App = () => {
   // Implement authentication logic
@@ -15,7 +16,7 @@ const App = () => {
     <div>
       <h1 className='header'>Image Gallery App</h1>
       {/* Implement authentication check */}
-      {authenticated ? <ImageGallery /> : <Login onLogin={handleLogin} />}
+      {authenticated ? <Apps /> : <Login onLogin={handleLogin} />}
     </div>
   );
 };

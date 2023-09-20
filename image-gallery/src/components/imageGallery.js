@@ -63,9 +63,20 @@ const ImageGallery = () => {
 
   useEffect(() => {
     const dummyImages = [
-      { id: 1, src: '/logo192.png', tag: 'Nature' },
-      { id: 2, src: 'https://via.placeholder.com/150', tag: 'City' },
-      // Add more images as needed
+      { id: 1, src: '/img19.png', tag: 'White' },
+      { id: 2, src: '/img18.png', tag: 'Green' },
+      { id: 3, src: '/img21.png', tag: 'Red' },
+      { id: 14, src: '/img9.png', tag: 'G' },
+      { id: 5, src: '/img10.png', tag: 'Orange' },
+      { id: 6, src: '/img11.png', tag: 'Yellow' },
+      { id: 7, src: '/img1.png', tag: 'Ballon' },
+      { id: 8, src: '/img14.png', tag: 'Cream' },
+      { id: 9, src: '/img19.png', tag: 'Beauty' },
+      { id: 10, src: '/img17.png', tag: 'Prety' },
+      { id: 11, src: '/img16.png', tag: 'Ren' },
+      { id: 12, src: '/img13.png', tag: 'Fabby' },
+      { id: 13, src: '/img8.png', tag: 'Staninless' },
+      
     ];
 
     setTimeout(() => {
@@ -96,22 +107,28 @@ const ImageGallery = () => {
       {loading ? (
         <div className="loading-spinner">Loading...</div>
       ) : (
-        <DndProvider backend={HTML5Backend}>
-          <div className="image-grid">
-            {filteredImages.map((image, index) => (
-              <DraggableImage
-                key={image.id}
-                image={image}
-                index={index}
-                onDragStart={handleDragStart}
-                onDrop={handleDrop}
-              />
-            ))}
-          </div>
-        </DndProvider>
+        <div className="image-grid">
+          {filteredImages.map((image, index) => (
+            <DraggableImage
+              key={image.id}
+              image={image}
+              index={index}
+              onDragStart={handleDragStart}
+              onDrop={handleDrop}
+            />
+          ))}
+        </div>
       )}
     </div>
   );
 };
 
-export default ImageGallery;
+const Apps = () => {
+  return (
+    <DndProvider backend={HTML5Backend}>
+      <ImageGallery />
+    </DndProvider>
+  );
+};
+
+export default Apps;
