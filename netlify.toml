@@ -11,7 +11,7 @@
 
 # Publish settings for Wall-clock
 [[redirects]]
-  from = "/image-gallary/*"           # Define the URL path for Wall-clock
-  to = "/image-gallary/:splat"         # Specify the directory path for Wall-clock
+  from = "/image-gallery/*"           # Define the URL path for Wall-clock
+  to = "/image-gallery/:splat"         # Specify the directory path for Wall-clock
   status = 200
   publish = "/"  # Specify the directory to publish for Wall-clock
