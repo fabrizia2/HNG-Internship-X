@@ -1,6 +1,6 @@
 # Global settings for Netlify
 [build]
-  command = "cd stage-2/movie-discovery-app && npm run build"  # build command if applicable
+  command = ""  # build command if applicable
 
 # Publish settings for stage one task
 [[redirects]]
@@ -11,7 +11,7 @@
 
 # Publish settings for Wall-clock
 [[redirects]]
-  from = "/stage-2/*"           # Define the URL path for Wall-clock
-  to = "/stage-2/:splat"         # Specify the directory path for Wall-clock
+  from = "/image-gallary/*"           # Define the URL path for Wall-clock
+  to = "/image-gallary/:splat"         # Specify the directory path for Wall-clock
   status = 200
-  publish = "stage-2/movie-discovery-app/build"  # Specify the directory to publish for Wall-clock
+  publish = "/"  # Specify the directory to publish for Wall-clock
