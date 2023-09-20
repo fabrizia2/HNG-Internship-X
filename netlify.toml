@@ -1,6 +1,12 @@
 # Global settings for Netlify
 [build]
-  command = ""  # build command if applicable
+  command = "npm run build"  # build command if applicable
+
+[[redirects]]
+  from = "/image-gallery/*"
+  to = "/image-gallery/:splat"     
+  status = 200
+  publish = "build"
 
 # Publish settings for stage one task
 [[redirects]]
@@ -9,9 +15,3 @@
   status = 200
   publish = "Stage-1"       # Specify the directory to publish for stage one task
 
-# Publish settings for Wall-clock
-[[redirects]]
-  from = "/image-gallery/*"           # Define the URL path for Wall-clock
-  to = "/image-gallery/:splat"         # Specify the directory path for Wall-clock
-  status = 200
-  publish = "/"  # Specify the directory to publish for Wall-clock
